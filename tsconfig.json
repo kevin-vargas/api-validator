@@ -6,7 +6,11 @@
     "sourceMap": true,
     "declaration": true,
     "resolveJsonModule": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "paths": {
+      "@schemas/*": ["./src/schemas/*"]
+    }
   },
+
   "include": ["src"]
 }
