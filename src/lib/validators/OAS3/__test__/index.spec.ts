@@ -21,7 +21,7 @@ describe('validators', () => {
           },
         },
       };
-      const result = OAS3(schemaToTest);
+      const { result } = OAS3(schemaToTest);
       expect(result).toBeFalsy();
     });
   });
