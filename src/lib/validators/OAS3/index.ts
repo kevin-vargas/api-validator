@@ -11,7 +11,7 @@ const validate: Validator = (schema: unknown) => {
 
   return {
     result: isValid,
-    info: isValid ? [] : ['Error en validacion'],
+    info: isValid ? '' : 'Error en validacion',
   };
 };
 

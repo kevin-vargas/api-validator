@@ -1,9 +1,7 @@
-import { boolean } from 'fp-ts';
-import { Parser } from '../../utils/interfaces';
-
 export interface ResultValidator {
   result: boolean;
-  info: string[];
+  //TODO: need an string array?
+  info: string;
 }
 export interface Validator {
   type: 'warning' | 'error';
