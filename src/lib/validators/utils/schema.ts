@@ -1,18 +1,6 @@
 import {
   prop,
   compose,
-  keys,
-  all,
-  binary,
-  length,
-  gt,
-  flip,
-  when,
-  curry,
-  tap,
-  test,
-  complement,
-  filter,
   path,
   juxt,
   flatten,
@@ -74,7 +62,7 @@ export const getQueryParams: TypeGetQueryParam = compose(
   flatten as (q: QueryParam[][]) => QueryParam[],
   juxt([getPathQueryParams, getComponentQueryParams]),
 );
-//TODO: check io-ts for this
+//TODO: check io-ts for this. Safe assertion
 export const assertSchemaType = (schema: unknown) => <TypeSchema>schema;
 
 export const isInQuery = compose(equals('query'), prop('in')) as (
