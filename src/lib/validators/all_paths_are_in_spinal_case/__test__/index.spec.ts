@@ -5,24 +5,23 @@ describe('validators', () => {
     it('should not valid', () => {
       const schemaToTest = {
         paths: {
-          '/i-T': {
-            get: {
-              parameters: [
-                {
-                  in: 'query',
-                  name: 'release_date_fromT',
-                },
-                {
-                  in: 'query',
-                  name: 'release_date_toT',
-                },
-              ],
-            },
-          },
+          '/i-T': {},
         },
       };
       const { result } = Validator(schemaToTest);
       expect(result).toBeFalsy();
+    });
+
+    it('should be valid', () => {
+      const schemaToTest = {
+        paths: {
+          '/tests': {},
+          '/tests/{id}': {},
+          '/tests-tests/{id}': {},
+        },
+      };
+      const { result } = Validator(schemaToTest);
+      expect(result).toBeTruthy();
     });
   });
 });
